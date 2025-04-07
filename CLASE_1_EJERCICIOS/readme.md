@@ -15,6 +15,9 @@ Programación III - UTN 2025
 ## 📬 Contacto
 - Correo: joakordediaz02@gmail.com
 
+## Tecnologias usadas
+- HTML
+
 ## 📄 Licencia
 Este proyecto está licenciado bajo la Licencia MIT.  
 Podés usar, modificar y distribuir el contenido libremente, siempre y cuando se mencione al autor original.
