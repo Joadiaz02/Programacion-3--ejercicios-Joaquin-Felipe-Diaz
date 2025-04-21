@@ -1,0 +1,42 @@
+body {
+    font-family: Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 40px;
+}
+
+h1 {
+    color: #1a237e;
+    text-align: center;
+    font-size: 32px;
+    
+    
+}
+
+.descripcion {
+    font-size: 18px;
+    color: #6d1414;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+ol {
+    background-color: #5797c5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    
+}
+
+ol li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+a {
+    
+    color: #0d47a1;
+}
+
+a:hover {
+    text-decoration: underline;
+}
