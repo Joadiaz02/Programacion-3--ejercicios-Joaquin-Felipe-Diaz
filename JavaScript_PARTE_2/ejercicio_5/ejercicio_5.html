@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio_5</title>
+</head>
+<body>
+    <h1>Jotasones</h1>
+    <script src="jotasones.js"></script>
+
+    <script>
+        const storageKey = "jotasones";
+        let data;
+
+        if (localStorage.getItem(storageKey)) {
+            data = JSON.parse(localStorage.getItem(storageKey));
+            console.log("Datos recuperados del localStorage:", data);
+            alert("Los datos se recuperaron del localStorage.");
+        } else {
+            localStorage.setItem(storageKey, JSON.stringify(jotasones));
+            data = jotasones;
+            console.log("Datos guardados en localStorage:", data);
+            alert("Los datos se guardaron en el localStorage.");
+        }
+        console.log("Contenido actual:", data);
+
+        let ultimoId = data[data.length - 1].id;
+        let nuevo = {
+            id: ultimoId + 1,
+            valor_1: ultimoId + 1,
+            valor_2: ultimoId + 1
+        };
+
+        data.push(nuevo);
+
+        localStorage.setItem(storageKey, JSON.stringify(data));
+
+        console.log("Nuevo elemento agregado:", nuevo);
+        alert("Se agregó un nuevo elemento. Último ID agregado: " + nuevo.id);
+    </script>
+</body>
+</html>

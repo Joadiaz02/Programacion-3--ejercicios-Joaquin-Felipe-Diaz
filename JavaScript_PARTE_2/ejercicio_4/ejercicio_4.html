@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO_4</title>
+</head>
+<body>
+    <h1>Lista de productos modificados</h1>
+
+    <script src="../ejercicio_2/ejercicio_2.js"></script>
+
+    <script type="text/javascript">
+        productos.forEach(producto => {
+            if (parseInt(producto.precio) % 2 !== 0) {
+                producto.moneda = 'usd';
+            }
+        });
+
+        console.log("Productos después de agregar 'moneda' a los precios impares:");
+        productos.forEach((producto, index) => {
+            console.log(`Producto ${index + 1}:`, producto);
+        });
+
+        productos.forEach(producto => {
+            if (parseInt(producto.precio) % 2 === 0) {
+                delete producto.fechaVencimiento;
+            }
+        });
+
+        console.log("Productos después de eliminar 'fechaVencimiento' en precios pares:");
+        productos.forEach((producto, index) => {
+            console.log( producto);
+        });
+    </script>
+</body>
+</html>
